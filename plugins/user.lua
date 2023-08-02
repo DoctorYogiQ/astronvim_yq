@@ -9,4 +9,12 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "nvim-telescope/telescope-bibtex.nvim",
+    ft = "markdown",
+    config = function ()
+    require"telescope".load_extension("bibtex")
+  end,
+  },
+  
 }
