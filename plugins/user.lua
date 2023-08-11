@@ -16,5 +16,24 @@ return {
     require"telescope".load_extension("bibtex")
   end,
   },
-  
+
+{
+  "mickael-menu/zk-nvim",
+  config = function()
+    require("zk").setup({
+        picker = "select",
+        lsp = {
+          config = {
+            cmd = { "zk", "lsp" },
+            name = "zk",
+          },
+
+          auto_attach = {
+            enabled = true,
+            filetypes = { "markdown" },
+          },
+        },
+    })
+  end
+},
 }
